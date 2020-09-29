@@ -522,5 +522,4 @@ async def next(ctx):
     
 
 
-token = open( 'token.txt', 'r'). readline()
-client.run( token )
+token = os.environ.get('BOT_TOKEN')
