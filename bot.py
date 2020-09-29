@@ -76,14 +76,15 @@ async def clear_error(ctx, error):
 #client.loop.create_task(ch_pr())
 #client.run()
 
-
+@bot.event
+async def on_ready():
+	await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="за сервером"))
+	print("The bot is ready!")
     
 
 #random
 
-@client.event
-async def on_ready():
-	print("The bot is ready!")
+
 	
 @client.command(pass_context = True)
 async def random_10(ctx):
